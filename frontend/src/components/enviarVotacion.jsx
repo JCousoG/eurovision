@@ -16,7 +16,7 @@ function enviarVotos() {
             
         }
         )
-        store.setVista("resultados")
+        store.setVista("mostrarResultados")
     }
 }
     return(

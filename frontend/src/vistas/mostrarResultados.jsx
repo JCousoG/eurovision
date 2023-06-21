@@ -1,6 +1,6 @@
 import ResultadoPais from "../components/resultadoPais"
 import { BACKEND_URL } from "../components/conf.mjs"
-
+import { useState, useEffect } from "react"
 
 function MostrarResultados() {
 

@@ -1,5 +1,5 @@
 
-function Clasificacion(resultado) {
+function Clasificacion({resultado}) {
 
     return(
         <>

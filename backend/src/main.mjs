@@ -38,7 +38,7 @@ app.put("/cancions/", async (request, response)=>{
     try {
         for (let cancionId in request.body) {
             const [modeloCancion] = await Cancion.findOrCreate({where: {id: cancionId}})
-            modeloCancion.puntos += ProcessingInstruction.body[cancionId]
+            modeloCancion.puntos += request.body[cancionId]
             modeloCancion.save()
         }
         response.setHeader("Content-Type", "application/json")
