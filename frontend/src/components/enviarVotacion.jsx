@@ -7,7 +7,7 @@ const [store] = useContext(Context)
 function enviarVotos() {
     if (store.puntos.length === 0) {
         fetch (
-           BACKEND_URL+"cancions/",
+           BACKEND_URL+"/cancions/",
            {method: "PUT",
            headers: {
             'Content-Type': 'application/json'

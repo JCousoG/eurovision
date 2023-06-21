@@ -10,7 +10,7 @@ function MostrarResultados() {
         []
       )
         function obterResultados() {
-            fetch(BACKEND_URL+"cancions/")
+            fetch(BACKEND_URL+"/cancions/")
             .then(reaccionPararesposta)
             .catch(reaccionParaErroResposta)
         }
