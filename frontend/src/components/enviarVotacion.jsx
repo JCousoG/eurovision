@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { Context } from "./contexto"
-import { BACKEND_URL } from "./config.mjs"
+import { BACKEND_URL } from "./conf.mjs"
 
 function EnviarVotacion() {
 const [store] = useContext(Context)
