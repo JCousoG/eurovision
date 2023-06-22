@@ -2,123 +2,118 @@ import { Cancion } from "../main.mjs"
 
 const cancions = [
     {id: 0,
-    pais: "España",
-    url:"3iZ43PJMy04"},
+    pais: "España"
+    },
     {id: 1,
-    pais: "Portugal",
-    url: "lvpDLq88cyo"},
+    pais: "Portugal"
+    },
     {id: 2,
-    pais: "Francia",
-    url: "GWfbEFH9NvQ"},
+    pais: "Francia"
+    },
     {id: 3,
-    pais: "Alemania",
-    url: "Y12_YMs9kCQ"},
+    pais: "Alemania"
+    },
     {id: 4,
-    pais: "Italia",
-    url: "N4HBDAbdXUg"},
+    pais: "Italia"
+    },
     {id: 5,
-    pais: "Reino Unido",
-    url: "tJ21grjN6wU"},
+    pais: "Reino Unido"
+    },
     {id: 6,
-    pais: "Irlanda",
-    url: "ak5Fevs424Y"},
+    pais: "Irlanda"
+    },
     {id: 7,
-    pais: "Bélgica",
-    url: "ORhEoS6d8e4"},
+    pais: "Bélgica"
+    },
     {id: 8,
-    pais: "Suecia",
-    url: "b3vJfR81xO0"},
+    pais: "Suecia"
+    },
     {id: 9,
-    pais: "Noruega",
-    url: "CxNiUxdJnTQ"},
+    pais: "Noruega"
+    },
     {id: 10,
-    pais: "Paises Bajos",
-    url: "UOf-oKDlO6A"},
+    pais: "Paises Bajos"
+    },
     {id: 11,
-    pais: "Rumanía",
-    url: "NRxv-AUCinQ"},
+    pais: "Rumanía"
+    },
     {id: 12,
-    pais: "Azerbayán",
-    url: "FLvPB2-2LAc"},
+    pais: "Azerbayán"
+    },
     {id: 13,
-    pais: "Croacia",
-    url: "AyKj8jA0Qoc"},
+    pais: "Croacia"
+    },
     {id: 14,
-    pais: "Finlandia",
-    url: "znWi3zN8Ucg"},
+    pais: "Finlandia"
+    },
     {id: 15,
-    pais: "Israel",
-    url: "r4wbdKmM3bQ"},
+    pais: "Israel"
+    },
     {id: 16,
-    pais: "Letonia",
-    url: "XRV2-jPqaUw"},
+    pais: "Letonia"
+    },
     {id: 17,
-    pais: "Malta",
-    url: "Apqwl0ayL6A"},
+    pais: "Malta"
+    },
     {id: 18,
-    pais: "Moldavia",
-    url: "se9LDgFW6ak"},
+    pais: "Moldavia"
+    },
     {id: 19,
-    pais: "Chequia",
-    url: "-y78qgDlzAM"},
+    pais: "Chequia"
+    },
     {id: 20,
-    pais: "Serbia",
-    url: "oeIVwYUge8o"},
+    pais: "Serbia"
+    },
     {id: 21,
-    pais: "Suiza",
-    url: "_8-Sbc_GZMc"},
+    pais: "Suiza"
+    },
     {id: 22,
-    pais: "Albania",
-    url: "mp8OG4ApocI"},
+    pais: "Albania"
+    },
     {id: 23,
-    pais: "Armenia",
-    url: "Co8ZJIejXBA"},
+    pais: "Armenia"
+    },
     {id: 24,
-    pais: "Australia",
-    url: "aqtu2GspT80"},
+    pais: "Australia"
+    },
     {id: 25,
-    pais: "Austria",
-    url: "ZMmLeV47Au4"},
+    pais: "Austria"
+    },
     {id: 26,
-    pais: "Chipre",
-    url: "zrFUKqTy4zI"},
+    pais: "Chipre"
+    },
     {id: 27,
-    pais: "Dinamarca",
-    url: "uWs69ddGEW4"},
+    pais: "Dinamarca"
+    },
     {id: 28,
-    pais: "Eslovenia",
-    url: "zDBSIGITdY4"},
+    pais: "Eslovenia"
+    },
     {id: 29,
-    pais: "Estonia",
-    url: "wO9g5t3VSuw"},
+    pais: "Estonia"
+    },
     {id: 30,
-    pais: "Georgia",
-    url: "E8kO-QPippo"},
+    pais: "Georgia"
+    },
     {id: 31,
-    pais: "Grecia",
-    url: "qL0EkId_sTY"},
+    pais: "Grecia"
+    },
     {id: 32,
-    pais: "Islandia",
-    url: "BhlJXcCv7gw"},
+    pais: "Islandia"
+    },
     {id: 33,
-    pais: "Lituania",
-    url: "68lbEUDuWUQ"},
+    pais: "Lituania"
+    },
     {id: 34,
-    pais: "Polonia",
-    url: "Jjsl-JCHDWE"},
+    pais: "Polonia"},
     {id: 35,
-    pais: "San Marino",
-    url: "Hjfq-T-8WHw"},
+    pais: "San Marino"},
     {id: 36,
-    pais: "Ucrania",
-    url: "neIscK1hNxs"},
+    pais: "Ucrania"},
   ]    
 
   cancions.forEach(
     async item => {
         item.puntos = 0
-        const cancion = await Cancion.findByPk(item.id)
-        if (cancion) cancion.update(item)
-        else Cancion.create(item)
+        const cancion = await Cancion.findOrCreate({where: {id: item.id}, defaults: item})
     }
   )

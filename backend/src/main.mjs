@@ -23,16 +23,13 @@ const Cancion = sequelize.define('Cancion', {
     pais: {
         type: DataTypes.STRING
     },
-    url: {
-        type: DataTypes.STRING
-    },
     puntos: {
         type: DataTypes.INTEGER,
         defaultValue: 0
     }
 } );
 
-await sequelize.sync()
+await sequelize.sync({alter: true})
 
 app.put("/cancions/", async (request, response)=>{
     try {
