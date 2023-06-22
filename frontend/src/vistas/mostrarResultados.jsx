@@ -25,11 +25,16 @@ function MostrarResultados() {
         function reaccionParaResultados(datos) {
             setResultados(datos)
         }
+        function manexadorBoton() {
+            window.location.reload
+        }
 
     return(
 
         <>
+         <button onClick={manexadorBoton}>Vuelve a votar</button>
         <h2>Clasificación </h2>
+
        <ResultadoPais resultados={resultados}/>
         </>
     )
