@@ -18,6 +18,7 @@ function enviarVotos() {
         )
         store.setVista("mostrarResultados")
     }
+    else {alert("Tienes que otorgar todos los puntos para poder enviar tu votación")}
 }
     return(
         <>
