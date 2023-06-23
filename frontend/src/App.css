@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
   background-color: black;
 }
 
@@ -15,7 +15,7 @@ h2 {
   font-size: 30px;
   color: grey;
   text-shadow: #555 2px 2px 3px;
-  text-align: center;
+  text-align: left;
   filter: shadow(color=#555555, direction=135, strength=2);
   width: 100%;}
 ul {
@@ -30,7 +30,7 @@ li {
   font-size: 20px;
   color: whitesmoke;
   text-shadow: #555 2px 2px 3px;
-  text-align: center;
+  text-align: left;
   filter: shadow(color=#555555, direction=135, strength=2);
   width: 100%;
   padding: 1em;}
