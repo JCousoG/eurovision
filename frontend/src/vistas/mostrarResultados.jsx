@@ -26,7 +26,7 @@ function MostrarResultados() {
             setResultados(datos)
         }
         function manexadorBoton() {
-            window.location.reload
+            window.location.reload()
         }
 
     return(
